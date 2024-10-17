@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Helper.Model\Helper.Model.csproj" />
     <ProjectReference Include="..\Helper.ViewModel\Helper.ViewModel.csproj" />
     <ProjectReference Include="..\Helper.View\Helper.View.csproj" />
