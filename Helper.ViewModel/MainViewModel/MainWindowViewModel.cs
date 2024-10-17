@@ -2,7 +2,7 @@
 
 namespace Helper.ViewModel.MainViewModel
 {
-    public class MainWindowViewModel : IMainWindowModel
+    public class MainWindowViewModel : IMainWindowViewModel
     {
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Helper.View.MainView;
 
-namespace Helper.Model.RegistrationModule
+namespace Helper.View.RegistrationModule
 {
     public class RegistrationModule : Module
     {
@@ -9,7 +9,7 @@ namespace Helper.Model.RegistrationModule
         {
             base.Load(builder);
 
-            builder.RegisterType<MainWindow>().As<IMainWindow>().SingleInstance();
+            builder.RegisterType<MainWindow>().As<IMainWindow>().InstancePerDependency();
         }
     }
 }
