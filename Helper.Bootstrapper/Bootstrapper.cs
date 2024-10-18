@@ -1,4 +1,7 @@
 using Autofac;
+using Helper.ViewModel.MainViewModel;
+using Helper.ViewModel.WindowsManager;
+using System.Windows;
 
 namespace Helper.Bootstrapper
 {
@@ -10,12 +13,28 @@ namespace Helper.Bootstrapper
         {
             var container = new ContainerBuilder();
 
-
-            container.RegisterModule<Helper.Model.RegistrationModule.RegistrationModule>();
-            container.RegisterModule<Helper.View.RegistrationModule.RegistrationModule>();
-            container.RegisterModule<Helper.ViewModel.RegistrationModule.RegistrationModule>();
+            container
+                .RegisterModule<Helper.Model.RegistrationModule.RegistrationModule>()
+                .RegisterModule<Helper.View.RegistrationModule.RegistrationModule>()
+                .RegisterModule<Helper.ViewModel.RegistrationModule.RegistrationModule>()
+                .RegisterModule<Helper.Bootstrapper.RegistrationModule.RegistrationModule>();
 
             _container = container.Build();
+        }
+
+        public Window Run()
+        {
+            var mainWindowViewModel = _container.Resolve<IMainWindowViewModel>();
+            IWindowManager windowManager = _container.Resolve<IWindowManager>();
+
+            var mainWindow = windowManager.Show(mainWindowViewModel);
+
+            if (mainWindow is not Window window)
+            {
+                throw new NotImplementedException();
+            }
+
+            return window;
         }
 
         public void Dispose()

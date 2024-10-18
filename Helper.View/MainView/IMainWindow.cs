@@ -1,6 +1,8 @@
-﻿namespace Helper.View.MainView
+﻿using Helper.ViewModel.Window;
+
+namespace Helper.View.MainView
 {
-    public interface IMainWindow
+    public interface IMainWindow : IWindow
     {
     }
 }

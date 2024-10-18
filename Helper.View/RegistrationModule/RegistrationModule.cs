@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Helper.View.MainView;
+using Helper.ViewModel.WindowsManager;
 
 namespace Helper.View.RegistrationModule
 {
@@ -10,6 +11,7 @@ namespace Helper.View.RegistrationModule
             base.Load(builder);
 
             builder.RegisterType<MainWindow>().As<IMainWindow>().InstancePerDependency();
+            builder.RegisterType<WindowsManager.WindowsManager>().As<IWindowManager>().SingleInstance();
         }
     }
 }

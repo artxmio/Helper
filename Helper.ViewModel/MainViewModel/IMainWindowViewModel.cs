@@ -1,6 +1,8 @@
-﻿namespace Helper.ViewModel.MainViewModel
+﻿using Helper.ViewModel.Window;
+
+namespace Helper.ViewModel.MainViewModel
 {
-    public interface IMainWindowViewModel
+    public interface IMainWindowViewModel : IWindowViewModel
     {
     }
 }
