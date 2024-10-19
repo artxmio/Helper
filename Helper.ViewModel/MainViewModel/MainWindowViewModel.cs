@@ -19,11 +19,20 @@ namespace Helper.ViewModel.MainViewModel
             records.Add(new RecordModel()
             {
                 ID = 101,
-                Date = new StringBuilder (new DateTime(1,2,3).ToString("dd.MM.yyyy")),
-                Number = new StringBuilder("123"),
-                Definition = new StringBuilder("Graphics Programming with GDI+"),
-                PerformerName = new StringBuilder("asdasd"),
-                PerformerPosition = new StringBuilder("awqe"),
+                Date = new DateTime(1,2,3).ToString("dd.MM.yyyy"),
+                Number = "123",
+                Definition = "Graphics Programming with GDI+",
+                PerformerName = "asdasd",
+                PerformerPosition = "awqe",
+            });
+            records.Add(new RecordModel()
+            {
+                ID = 111,
+                Date = new DateTime(1, 2, 3).ToString("dd.MM.yyyy"),
+                Number = "123",
+                Definition = "Graphics Programming with GDI+",
+                PerformerName = "asdasd",
+                PerformerPosition = "awqe",
             });
             return records;
         }
