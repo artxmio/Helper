@@ -15,30 +15,16 @@ namespace Helper.ViewModel.MainViewModel
         private List<RecordModel> GenerateRecords()
         {
             List<RecordModel> records = new();
+
             records.Add(new RecordModel()
             {
                 ID = 101,
-                OrderDateAndNumber = new StringBuilder("123"),
-                OrderDefinition = new StringBuilder("Graphics Programming with GDI+"),
-                PerformerNameAndPosition = new StringBuilder("asdasd"),
+                Date = new StringBuilder (new DateTime(1,2,3).ToString("dd.MM.yyyy")),
+                Number = new StringBuilder("123"),
+                Definition = new StringBuilder("Graphics Programming with GDI+"),
+                PerformerName = new StringBuilder("asdasd"),
+                PerformerPosition = new StringBuilder("awqe"),
             });
-
-            records.Add(new RecordModel()
-            {
-                ID = 201,
-                OrderDateAndNumber = new StringBuilder("123"),
-                OrderDefinition = new StringBuilder("Graphics Programming with GDI+"),
-                PerformerNameAndPosition = new StringBuilder("asdasd"),
-            });
-
-            records.Add(new RecordModel()
-            {
-                ID = 244,
-                OrderDateAndNumber = new StringBuilder("123"),
-                OrderDefinition = new StringBuilder("Graphics Programming with GDI+"),
-                PerformerNameAndPosition = new StringBuilder("asdasd"),
-            });
-
             return records;
         }
     }

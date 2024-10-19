@@ -21,10 +21,8 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="dataGrid" Grid.RowSpan="2" ItemsSource="{Binding records}">
-            
-        </DataGrid>
-        
+        <DataGrid x:Name="dataGrid" Grid.RowSpan="2" ItemsSource="{Binding records}" AutoGenerateColumns="True"/>
+
         <Grid Grid.Column="1" Margin="10, 0, 0, 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
