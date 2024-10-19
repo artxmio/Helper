@@ -9,7 +9,7 @@ namespace Helper.Model.RegistrationModule
         {
             base.Load(builder);
 
-            builder.RegisterType<MainWindowModel>().As<IMainWindowModel>().InstancePerDependency();
+            builder.RegisterType<RecordModel>().InstancePerDependency();
         }
     }
 }

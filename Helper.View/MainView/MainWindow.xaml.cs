@@ -1,10 +1,14 @@
-﻿namespace Helper.View.MainView
+﻿using Helper.ViewModel.MainViewModel;
+
+namespace Helper.View.MainView
 {
     public partial class MainWindow : IMainWindow
     {
-        public MainWindow() 
+        public MainWindow(IMainWindowViewModel viewModel) 
         {
             InitializeComponent();
+
+            DataContext = viewModel; 
         }
     }
 }
